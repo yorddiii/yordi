@@ -10,10 +10,12 @@ PLAN.json:
   "captions": "captions.json",          # written with --captions (or when missing)
   "takes": [                            # in story order; word indices from ingest.md
     {"clip": "IMG_0001.MOV", "from": 0, "to": 14},
-    {"clip": "IMG_0003.MOV", "from": 2, "to": 40, "drop": [17, 18]}   # drop = flubbed word indices
+    {"clip": "IMG_0003.MOV", "from": 2, "to": 40, "drop": [17, 18]},  # drop = flubbed word indices
+    {"gap": 4.3}                        # voice-less music montage (cover it with B-roll inserts)
   ],
   "max_pause": 0.22,                    # longer silences inside a take are cut out (jump cut)
-  "zooms": [1.0, 1.15]                  # alternated at every jump cut, like the reference
+  "zooms": [1.0, 1.15],                 # alternated at every jump cut ([1.0] = never punch in)
+  "caption_style": "bold"               # bold (ref 01) | mixed (ref 02) caption draft
 }
 
 Prints every word with its OUTPUT time, so B-roll inserts can be placed on the exact
@@ -36,6 +38,12 @@ def build_aroll(plan, base):
     zooms = plan.get("zooms", [1.0, 1.15])
     cuts, tl_words, t_out, zi = [], [], 0.0, 0
     for take in plan["takes"]:
+        if "gap" in take:
+            cuts.append({"gap": take["gap"]})
+            if tl_words:
+                tl_words[-1]["phrase_end"] = True
+            t_out += take["gap"]
+            continue
         stem = os.path.splitext(take["clip"])[0]
         words = load_json(os.path.join(words_dir, stem + ".json"))
         drop = set(take.get("drop", []))
@@ -66,6 +74,49 @@ def build_aroll(plan, base):
                                  "phrase_end": i == run_[-1]})
             t_out += t_end - t_in
     return cuts, tl_words, t_out
+
+
+STOP = set("a an and are as at be but by can for from has have i in into is it its just "
+           "like make of on or our so that the their them then they this to up was we what "
+           "when which while will with you your".split())
+
+
+def draft_captions_mixed(words, total):
+    """Ref-02 pages: a small light-italic connector line + a big bold keyword line."""
+    pages, small, big = [], [], []
+
+    def close():
+        nonlocal small, big
+        lines = []
+        if small:
+            lines.append({"font": "light-italic", "scale": 0.78, "words": small})
+        if big:
+            lines.append({"font": "bold", "scale": 1.2, "words": big})
+        if lines:
+            pages.append({"lines": lines})
+        small, big = [], []
+
+    for w in words:
+        tok = {"t": w["w"], "s": w["s"]}
+        content = w["w"].lower() not in STOP
+        if not content and big:
+            close()
+        if content:
+            if len(big) >= 2 or sum(len(x["t"]) for x in big) + len(tok["t"]) > 12:
+                close()
+            big.append(tok)
+        else:
+            small.append(tok)
+        if w["phrase_end"]:
+            close()
+    close()
+    for p in pages:
+        p["start"] = min(x["s"] for ln in p["lines"] for x in ln["words"])
+    for i, p in enumerate(pages):
+        last = max(x["s"] for ln in p["lines"] for x in ln["words"])
+        nxt = pages[i + 1]["start"] if i + 1 < len(pages) else total
+        p["end"] = round(min(nxt, last + 1.5), 3)
+    return {"style": {"preset": "mixed"}, "pages": pages}
 
 
 def draft_captions(words, total):
@@ -102,7 +153,7 @@ def draft_captions(words, total):
         p["start"] = p["lines"][0]["words"][0]["s"]
         nxt = pages[i + 1]["lines"][0]["words"][0]["s"] if i + 1 < len(pages) else total
         p["end"] = round(nxt, 3)
-    return {"style": {"size": 69, "y": 0.525}, "pages": pages}
+    return {"style": {"preset": "bold"}, "pages": pages}
 
 
 def main():
@@ -125,7 +176,8 @@ def main():
     save_json(words, os.path.join(base, plan.get("work", "work"), "timeline_words.json"))
     cap_path = os.path.join(base, plan.get("captions", "captions.json"))
     if a.captions or not os.path.exists(cap_path):
-        save_json(draft_captions(words, total), cap_path)
+        draft = draft_captions_mixed if plan.get("caption_style") == "mixed" else draft_captions
+        save_json(draft(words, total), cap_path)
         print(f"caption draft -> {cap_path}")
     print(f"{len(cuts)} A-roll cuts, {total:.2f}s -> {edit_path}\n")
     line = []

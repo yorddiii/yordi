@@ -1,105 +1,162 @@
-# Edit style guide: local-service talking-head ad
+# Edit style guide: local-service ad reels
 
-Learned from `ali-reel-01.md` (Abilene Auto Aesthetics, 43 s, 9:16). Every number
-below was measured from that video frame by frame. When a new reference ad comes
-in, add its breakdown next to this file and update the rules here wherever it
-confirms, extends or contradicts them.
+Learned from two reference ads, each measured frame by frame:
 
-## 1. Script skeleton (what the edit is built around)
+| Style | Reference | Feel |
+|-------|-----------|------|
+| **A: "Bold Local"** | `ali-reel-01.md` (Abilene Auto Aesthetics, 43 s) | Calls out the city, speaker-led, fast service montage, loud caps captions, light leaks |
+| **B: "Myth-Buster Cinematic"** | `derek-detail-01.md` (D-LUX Detail, 27 s) | Contrarian hook, mostly slow-mo B-roll with voiceover, music-only montages, mixed-type captions with a colour sweep, PiP proof shots |
 
-| # | Beat | Reference line | Length |
-|---|------|----------------|--------|
-| 1 | **Location call-out + pain hook** | "Abilene residents, if your vehicle is overdue for an interior and exterior detail…" | 0–3.4 s |
-| 2 | **"This is for you"** | "…this video is for you." | 3.4–4.4 s |
-| 3 | **Who we are + where** | "At Abilene Auto Aesthetics we help vehicle owners throughout West Texas…" | 4.4–7.4 s |
-| 4 | **Outcome** | "…keep their cars looking clean, comfortable and looking their best." | 7.4–10.3 s |
-| 5 | **Process, part 1 (interior)** | "Inside, we steam clean and blow out all surfaces, shampoo your carpets and upholstery, then we finish with interior protectants designed to protect your vehicle from harmful UV rays." | 10.3–19.4 s |
-| 6 | **Process, part 2 (exterior)** | "On the exterior we start off by cleaning the wheels and tires thoroughly, handwashing the vehicle, removing years of built-up dirt and grime." | 19.4–25.7 s |
-| 7 | **Care / differentiator** | "We take our time on the vehicle and focus on the details you notice once the job is finished, so your car doesn't just look clean from the street." | 25.7–31.5 s |
-| 8 | **Offer + price anchor** | "Our full interior and exterior details are at $249, with final pricing depending on the size and condition of the vehicle." | 31.5–38.5 s |
-| 9 | **CTA** | "Click the link or contact Abilene Auto Aesthetics to request a quote and reserve your appointment today." | 38.5–43.2 s |
+When a new reference comes in, add its breakdown file. Then fold it in here: confirm a
+style, add options to one, or add a style C.
 
-The first ~26 s (beats 1–6) are **B-roll heavy**. The last ~17 s (beats 7–9: trust,
-price, CTA) are **talking head only**, because that's where the viewer needs to see
-the person.
+## 0. Which style to use
 
-## 2. Picture
+- The user names one ("like the first one" = A, "like the Derek one" = B) → use that.
+- The footage is mostly **talking head with a few B-roll clips**, or the ad sells a
+  **city-wide service with a price** → **A**.
+- The footage is mostly **cinematic B-roll** (slow-mo, macro, gimbal), the angle is
+  **educational or contrarian** ("X is ruining your Y"), or the script is short (20–30 s) → **B**.
+- If you're unsure, pick by footage and say which style you used and why. Don't mix
+  caption systems inside one ad. Transitions can be borrowed across styles
+  sparingly (one spin in an A ad is fine).
 
-- **Format:** 9:16, speaker centred, framed from mid-thigh up. The car or product sits
-  behind them and the business setting fills the background.
-- **Pacing:** 26 cuts/transitions in 43 s, so an average shot of 1.6 s. B-roll shots run
-  0.5–1.4 s. Talking-head stretches run 1–3 s in the B-roll half and 2–7 s in the closing half.
-- **Silence:** the voice never pauses. Every gap between words is cut out (jump cuts).
-- **Punch-in zooms:** the talking head alternates between a wide frame (scale 1.0) and
-  a tighter one (about 1.15×, centred slightly above the chest). The zoom changes at
-  every jump cut or re-entry from B-roll, so the same zoom never shows twice in a row.
-  The closing section uses about 1.05× and about 1.10×.
-- **B-roll is literal:** each B-roll shot shows exactly the noun or verb being said, at
-  the moment it's said: "steam clean" shows steam, "wheels and tires" shows a wheel
-  being scrubbed, "harmful UV rays" shows the car in the sun.
-- **B-roll starts on the keyword's first syllable** (± 2 frames) and lasts until the
-  next phrase starts.
-- **Split screen** (2.13–3.39 s): when the line names two things ("interior and
-  exterior"), the frame is split top and bottom 50/50 with a white divider about 12 px
-  wide at 1080. Each half is labelled with one orange word at its own centre: INTERIOR
-  at y≈0.25, EXTERIOR at y≈0.75, with the second label appearing when that word is said.
-- **Grade:** bright, clean and natural, with a mild contrast and saturation lift. No
-  heavy LUT.
+## 1. Shared principles (both references agree)
 
-## 3. Transitions
+1. **Hook in the first 1.5 s** with the viewer's problem, said by the person on camera
+   with captions running from frame 1.
+2. **Silence is cut.** Voice segments are tight jump cuts. Only music-only montages
+   (style B) are voice-free, and those are deliberate.
+3. **B-roll is literal and on the word.** The shot starts on the keyword's first syllable.
+4. **Captions reveal word by word on the spoken time.** A page never reflows, and the
+   key word on every page is emphasised (colour in A, size/weight/sweep in B).
+5. **The talking head comes back for the CTA.** The last 5–15 s are the person asking
+   for the booking, with the brand name on screen.
+6. **Music under everything,** ducked hard under the voice. No sound effects.
+7. **Natural, bright grade.** No heavy LUT.
 
-There are only four kinds. Hard cuts are the default.
+## 2. Style A: "Bold Local" (ref 01)
 
-| Name | Where it's used | Measured look (23 fps ref) |
-|------|-----------------|----------------------------|
-| `cut` | Inside B-roll montages, and talking head to B-roll mid-beat | — |
-| `flash` (cream light-leak) | **Beat changes**, talking head ↔ B-roll section boundaries (2.13, 3.39, 10.26, 14.48, 19.35, 25.65 s) | 2 frames brighten and warm up, then 1–2 frames of solid cream **#F6DCAB**, then the new shot arrives with an orange-to-pink leak that fades over about 0.25 s |
-| `prism` (rainbow leak) | **Covers talking-head jump cuts** in the long closing section (29.48, 31.52, 38.52 s, roughly every 2–7 s) | About 0.2 s: a diagonal orange → violet → peach sweep covering about half the frame, with the image still visible underneath |
-| `whip` | The first B-roll of a new process beat (12.17 s, "all surfaces") | Vertical motion blur and a downward slide: the old shot smears for 1 frame, the new one arrives heavily blurred and sharpens within 3 frames |
+### Script (40–45 s)
+| Beat | Example | Length |
+|------|---------|--------|
+| Location call-out + pain | "Abilene residents, if your vehicle is overdue for an interior and exterior detail…" | 0–3.4 s |
+| "This is for you" | "…this video is for you." | ~1 s |
+| Who + where | "At Abilene Auto Aesthetics we help vehicle owners throughout West Texas…" | ~3 s |
+| Outcome | "…keep their cars looking clean, comfortable and looking their best." | ~3 s |
+| Process (interior, then exterior) | "Inside, we steam clean and blow out all surfaces, shampoo…" | ~15 s |
+| Care / differentiator | "We take our time… details you notice once the job is finished" | ~6 s |
+| Offer + price | "Our full interior and exterior details are at $249, with final pricing depending on…" | ~7 s |
+| CTA | "Click the link or contact Abilene Auto Aesthetics to request a quote and reserve your appointment today." | ~5 s |
 
-Use about 6 flashes, 1 whip and 3 prisms in a 40–45 s ad. Don't use a flash on every cut.
+The first ~26 s lean on B-roll. The last ~17 s are talking head only.
 
-## 4. Captions (the biggest part of the look)
+### Picture
+- Shots average 1.6 s; B-roll runs 0.5–1.4 s; talking-head stretches run 1–3 s, then 2–7 s at the end.
+- **Punch-ins:** the talking head alternates scale 1.0 and ~1.15 at every jump cut or
+  re-entry, so the same zoom never shows twice in a row. The closing section uses ~1.05 / ~1.10.
+- **Split screen** for "X and Y" pairs: a 50/50 top/bottom split with a 12 px white
+  divider. Each half carries a one-word orange label at its centre (y 0.25 / 0.75).
 
-- **Font:** an extended, squared, heavy sans in the Eurostile Extended / Good Times
-  family. We use **Saira ExtraBold Expanded** (OFL, bundled). ALL CAPS, no
-  punctuation (DOESNT, not DOESN'T). Numbers are written as numerals with `$` ($249).
-- **Size:** a 17-character line fills about 73% of the frame width (font size 69 px at 1080 wide).
-  Orange lines are about 10% bigger than white ones.
-- **Position:** horizontally centred at **y ≈ 0.525** (the speaker's chest, below the
-  face). On B-roll, move it to wherever it avoids the subject (0.20–0.45 is common).
-- **Pages:** 1–2 lines, 1–3 words per line (≤ ~16 chars). A page hard-swaps to the
-  next with no exit animation.
-- **Colour logic:**
-  - Line 1 is white **#FAFAFA**.
-  - Line 2 is the orange payoff: a vertical gradient from **#FFC855** at the top to
-    **#EE6C00** at the bottom, with a dark-brown soft shadow.
-  - It shows the place ("WEST TEXAS"), the service ("INTERIOR AND EXTERIOR"), the
-    benefit ("LOOK CLEAN", "DETAILS YOU NOTICE"), the price ("$249"), the brand
-    ("ABILENE AUTO AESTHETICS", orange on both lines) or the CTA ("YOUR APPOINTMENT").
-  - Single-keyword pages are fully orange ("INSIDE", "ALL SURFACES", "HANDWASHING",
-    "HARMFUL UV RAYS").
-  - Plain connective phrases are white only ("THEN WE FINISH", "CLICK THE", "OR").
-- **Reveal:** each word appears **on its own spoken start time**. The page layout is
-  final from the start, so words never shift. A word enters over about 0.13 s: a slide
-  of about 4% of the width from the right, horizontal motion blur, and a fade from 0 to 1.
-- **Icon:** a red map-pin to the left of the location line ("📍 THROUGHOUT WEST TEXAS").
+### Transitions
+| Name | Use | Look |
+|------|-----|------|
+| `cut` | Default; inside montages | — |
+| `flash` | Beat changes, talking head ↔ B-roll sections (~6 per ad) | Brighten and warm, 1–2 frames of cream #F6DCAB, then an orange-to-pink leak fading over 0.25 s |
+| `prism` | Covers talking-head jump cuts in the closing section (~3) | 0.2 s diagonal orange → violet → peach sweep at half coverage |
+| `whip` | Into the first B-roll of a process beat (once) | Vertical smear and slide that sharpens in 3 frames |
 
-## 5. Sound
+### Captions (`"preset": "bold"`)
+- **Font and size:** Saira ExtraBold Expanded (a Eurostile/Good Times stand-in),
+  ALL CAPS, no punctuation, $ numerals. 69 px at 1080 wide; orange lines ×1.1.
+- **Position:** centred at y ≈ 0.525 (chest). On B-roll, move it off the subject (0.20–0.45).
+- **Pages:** 1–2 lines, 1–3 words per line (≤ 16 chars). Pages hard-swap with no exit animation.
+- **Colour:**
+  - Line 1 is white.
+  - Line 2 is the orange gradient payoff (#FFC855 → #EE6C00) for the place, service,
+    benefit, price, brand or CTA.
+  - Single keywords and the brand name are fully orange.
+- **Reveal:** words slide in from the right with motion blur in 0.13 s.
+- **Icon:** a red map pin before the location line.
 
-- The voice is the whole show, kept clean and dense. The finished mix sits at about
-  -18 LUFS integrated. We normalise the voice to -16 LUFS for reels.
-- A **quiet music bed** sits under the voice the whole time, about 25–30 dB below
-  it, with nothing loud enough to compete. The ad never drops to silence.
-- **No sound effects** on the flashes or whip; the reference uses none.
+### Sound
+The voice sits at about -16 LUFS. The music is 25–30 dB below it (`gain_db` ≈ -21, `duck_ratio` 5).
 
-## 6. Checklist before delivering
+## 3. Style B: "Myth-Buster Cinematic" (ref 02)
 
-1. Hook names the **city/area** in the first two words, and the pain point by 2 s.
-2. B-roll (or split screen) is on screen within the first 2.5 s.
-3. No silence anywhere, and no two consecutive talking-head cuts at the same zoom.
-4. Every service named in the process beats has a literal B-roll shot.
-5. Flash on beat changes, prism on closing-section jump cuts, one whip.
-6. Captions are proof-read word for word (brand name, city, price), and the payoff words are orange.
-7. The last 15 s are talking head only: trust, price, CTA.
-8. The video ends right on the last CTA word.
+### Script (25–30 s)
+| Beat | Example | Length |
+|------|---------|--------|
+| Contrarian hook, on camera | "Automatic car washes are killing YOUR paint." | 0–2.4 s |
+| Tease | "Here's why." | ~0.8 s |
+| **Music montage #1**, no voice | Process B-roll: foam, wheels, mats | ~4 s (3 shots) |
+| Explanation as voiceover over B-roll | "The brushes used in automatic car washes are often dirty and loaded with debris. Dragging that across your paint can create micro swirls and scratches…" | ~8 s |
+| Punchline | "…that make your paint look like s**t." | ~1.5 s |
+| **Music montage #2**, no voice | Beauty shots of the finished car: interior, rear, wheel | ~5 s (3 shots) |
+| CTA on camera | "Don't let a machine ruin your paint. Book a proper hand wash with D-LUX Detail today with the link down below." | ~5 s |
+| Fade to black + hold | — | ~0.9 s |
+
+The talking head is only on screen for the hook and the CTA (about 30% of runtime).
+Everything in between is B-roll.
+
+### Picture
+- Shots average 2 s; B-roll runs 1–2.3 s, longer and calmer than style A.
+  Shoot or conform slow-mo (`"speed": 0.5–0.8` on 60 fps clips). Use gimbal glides,
+  macro close-ups and glossy beauty angles.
+- **No punch-ins** (`"zooms": [1.0]`). The talking head is a wide full-body shot,
+  ideally walking toward the camera. The CTA is cut across 2–3 positions or locations with hard cuts.
+- **PiP proof shot:** when the voice names a defect you can show in macro ("micro swirls",
+  "scratches"), float the macro clip in a box over the B-roll (`"layout": "pip"`,
+  `rect` ≈ [0.17, 0.30, 0.66, 0.27]). It pops in on a cut, fades out over 0.12 s, and
+  the next PiP can follow immediately.
+- **Fade in** from black (0.1 s) and **fade out** to black (0.3 s) with a 0.6 s black `tail`.
+
+### Transitions
+- Hard cuts are the default; music-montage cuts land on the beat.
+- `spin`, once, into the beauty montage: a rotational zoom-blur of about 0.2 s.
+- No flashes or light leaks.
+
+### Captions (`"preset": "mixed"`)
+- **Font:** a humanist sans family (Open Sans standing in for Segoe UI), white only,
+  soft shadow. Mixed case; ONE word per phrase may go ALL CAPS for stress
+  ("killing YOUR", "down BELOW", "MACHINE", "PROPER").
+- **Size hierarchy** (`scale` × 104 px base):
+
+  | Role | Font | Scale |
+  |------|------|-------|
+  | Connector / filler ("are", "The brushes", "Book a", "with", "today") | `light-italic` | 0.75–0.9 |
+  | Plain phrase ("killing YOUR", "across", "look like") | `regular` | 1.0 |
+  | Keyword ("Automatic", "PROPER", "car washes", "D-LUX Detail") | `bold` | 1.1–1.4 |
+  | Punch phrase ("loaded with debris", "micro swirls", "YOUR PAINT") | `extrabold-italic` | 1.05–1.2 |
+  | One hero word per ad ("paint") | `extrabold-italic`, `enter: pop` | 2.3–2.5 |
+  | Tease ("Here's why") | `semibold-italic` | 1.25 |
+
+- **Layout:** stack 2–4 short lines with a tight line gap (0.86), sometimes offset
+  left or right (`align`/`dx`) for a hand-placed look. Put them in free space: chest
+  height on the talking head, upper third on B-roll, or over the PiP.
+- **Sweep:** set `"sweep": true` on 1 keyword every few seconds ("Automatic", "dirty",
+  "micro swirls", "YOUR PAINT"). A teal → violet band runs across the word and settles on its last letters.
+- **Motion and timing:**
+  - Words slide in from the left with blur in 0.15 s, and pages fade out over 0.15 s.
+  - In the CTA, a new keyword can replace the previous one in the same spot (a new
+    page with the same `y`).
+- **No captions** during the music-only montages.
+- **Tone:** casual, and profanity is allowed only if censored ("S\*\*T"). Ask before using any.
+
+### Sound
+- The voice sits at about -16 LUFS and the ad lands around -19 LUFS overall.
+- Music is higher than in A: `gain_db` ≈ -12 with `duck_ratio` 8. It swells to full
+  level in the voice-less montages (the side-chain handles this automatically) and fades with the picture.
+- Montage cuts sit on the music's beats.
+
+## 4. Checklist before delivering (both styles)
+
+1. The hook states the problem by 1.5 s (A: city in the first two words; B: a contrarian claim).
+2. B-roll appears by 2.5 s (A) or 3.5 s (B).
+3. There's no unintended silence, and in A no two consecutive talking-head cuts share a zoom.
+4. Every named service or defect has literal B-roll or a PiP on its word.
+5. Transitions follow the style's table, and none come from the other style unless deliberate.
+6. Captions are proof-read word by word (brand, city, price), the emphasis is applied,
+   and there are no captions in music-only montages.
+7. The CTA is on camera with the brand name captioned, and the video ends on the last CTA
+   word (A) or fades to black with a tail (B).

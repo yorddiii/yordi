@@ -1,15 +1,16 @@
 ---
 name: reel-editor
-description: Edit raw phone clips (talking-head takes + B-roll) into a finished 9:16 local-service ad reel in the learned house style - jump-cut talking head with punch-in zooms, literal B-roll on every service word, split screen, cream flash / prism light-leak / whip transitions, word-by-word white+orange extended-font captions, ducked music bed. Use whenever the user sends raw clips to edit "like the reference", asks for an ad/reel/TikTok edit, or sends a new example ad to learn from.
+description: Edit raw phone clips (talking-head takes + B-roll) into a finished 9:16 local-service ad reel in one of the learned styles - A "Bold Local" (jump-cut talking head with punch-ins, literal B-roll, split screen, flash/prism/whip light-leak transitions, white+orange caps captions) or B "Myth-Buster Cinematic" (contrarian hook, slow-mo B-roll voiceover, music-only montages, PiP macro proof shots, spin transition, mixed-weight captions with colour sweep, fade to black). Use whenever the user sends raw clips to edit "like the reference", asks for an ad/reel/TikTok edit, or sends a new example ad to learn from.
 ---
 
 # Reel editor
 
 You are the editor. The scripts do the mechanical work (transcribe, cut, render). You
-make every creative decision: which takes, which B-roll on which word, which
-transitions, and the caption wording and colours. Those decisions follow
-`reference/style-guide.md`. **Read it first, every time.** Per-reference shot lists
-live next to it (`reference/ali-reel-01.md`, ...).
+make every creative decision: which style, which takes, which B-roll on which word,
+which transitions, and the caption wording and emphasis. Those decisions follow
+`reference/style-guide.md`. **Read it first, every time**, and pick the style with its
+§0. Per-reference shot lists live next to it (`ali-reel-01.md` = style A,
+`derek-detail-01.md` = style B). Open the one for your style as a worked example.
 
 Requirements: `ffmpeg`, `python3` with `numpy` + `Pillow`. `transcribe.py`
 installs `vosk` and fetches its model on first use, via npm when the usual model
@@ -33,29 +34,47 @@ stay out of git.
    prices ("appling auto" → "Abilene Auto", "two forty nine" → "$249"). Fix
    `work/words/<clip>.json` entries in place. Keep the times and change only `"w"`.
 4. **Choose takes.** Write `plan.json` (format in `plan.py`'s docstring). Build the
-   script in the style-guide beat order (hook with location → for you → who and where
-   → outcome → process → care → price → CTA). For each beat take the best clean take
-   and drop flubs, restarts and filler (`drop` takes word indices). Then run
+   script in your style's beat order (style guide §2/§3). For each beat take the best
+   clean take and drop flubs, restarts and filler (`drop` takes word indices). For
+   style B, add `{"gap": seconds}` entries for the music-only montages, and set
+   `"zooms": [1.0]` and `"caption_style": "mixed"`. Then run
    `python3 $S/plan.py reels/<job>/plan.json --captions`. It cuts every pause longer
-   than 0.22 s, alternates zoom 1.0 / 1.15 at each jump cut, writes `edit.json` and
+   than 0.22 s, alternates the zooms at each jump cut, writes `edit.json` and
    `captions.json`, and prints every word with its **output** time.
 5. **Lay B-roll and transitions** in `edit.json` → `inserts` (schema in `render.py`):
-   - Every service or benefit noun gets a literal B-roll shot that starts on that
-     word's output time and ends where the next phrase starts. B-roll runs 0.5–1.4 s per shot.
-   - Use a split screen for "X and Y" pairs (interior/exterior, before/after).
-   - `flash` goes on beat changes, both into and out of B-roll sections, about 6 per ad.
-     `whip` goes into the first B-roll of a process beat, once. In the B-roll-free
-     closing section, set `"join": "prism"` on about every second or third A-roll cut.
-   - The last ~15 s (care → price → CTA) stay talking head only.
-   - Fit tight zooms by setting `zoom`/`focus` per cut so the head stays in the top
-     third. Never put the same zoom on two consecutive cuts.
-6. **Captions** (`captions.json`): fix the auto pages so they follow the style guide.
-   Use 1–2 lines with 1–3 words each. Line 1 is white and line 2 is the orange payoff.
-   Single keywords and the brand name are fully orange. Write `$249`, not "two forty
-   nine", and drop the apostrophes. Add `"icon": "pin"` on the location page. On B-roll,
-   move `y` off the subject. For a split screen use two overlapping pages at
-   `y` 0.25 and 0.75. Each word's `s` is its output time: when you merge or retype
-   words, keep the `s` of the spoken word.
+   - Every service, benefit or defect noun gets a literal B-roll shot that starts on that
+     word's output time and ends where the next phrase starts.
+   - **Style A:**
+     - B-roll runs 0.5–1.4 s per shot.
+     - Use a split screen for "X and Y" pairs.
+     - `flash` goes on beat changes (~6 per ad), and `whip` into the first B-roll of a
+       process beat, once.
+     - Set `"join": "prism"` on every second or third A-roll cut in the B-roll-free
+       closing section.
+     - Keep the last ~15 s talking head only.
+     - Set `zoom`/`focus` per cut so the head stays in the top third, and never put
+       the same zoom twice in a row.
+   - **Style B:**
+     - B-roll runs 1–2.3 s per shot, slowed with `speed` 0.5–0.8 when the clip is 60 fps.
+     - Each gap gets 3 B-roll shots cut on the music beats.
+     - Add `"layout": "pip"` inserts with macro proof shots on defect words.
+     - Use `spin` once, into the beauty montage, and hard cuts everywhere else.
+     - Set `"fade_in": 0.1, "fade_out": 0.3, "tail": 0.6`.
+     - Music: `gain_db` -12 with `duck_ratio` 8.
+6. **Captions** (`captions.json`, schema in `render.py`): fix the auto pages so they
+   follow your style's caption section.
+   - **A (`preset: bold`):**
+     - Use 1–2 lines with 1–3 words each, white line plus orange payoff line.
+     - Write `$249`, not "two forty nine", and drop the apostrophes.
+     - Add `"icon": "pin"` on the location page.
+     - For a split screen use two pages at `y` 0.25 and 0.75.
+   - **B (`preset: mixed`):**
+     - Give every word a role: light-italic connectors, bold keywords, one
+       extrabold-italic hero word (`enter: pop`, scale about 2.4).
+     - Add `sweep` on a keyword every few seconds and ALL CAPS on one stressed word.
+     - Leave the music montages without captions.
+   - Each word's `s` is its output time: when you merge or retype words, keep the `s`
+     of the spoken word. On B-roll, move `y` off the subject.
 7. **Preview.** Run `python3 $S/render.py reels/<job>/edit.json --preview` (540×960,
    fast). You can render a section with `--from/--to`. Review it with
    `python3 $S/analyze.py out/final_preview.mp4 --out work/review`: open the sheets,
@@ -81,7 +100,12 @@ stay out of git.
 ## Renderer notes
 
 - The A-roll is concatenated and the **voice comes only from A-roll**. Inserts cover the
-  picture while the voice keeps playing, so B-roll is a pure overlay.
+  picture while the voice keeps playing, so B-roll is a pure overlay. `{"gap": s}` A-roll
+  entries are silent (the music swells there) and black unless an insert covers them.
+- PiP inserts float above whatever is underneath. Captions are drawn above PiPs, and
+  fades apply last.
+- The auto-transcriber is poor when music is under the voice. Raw clips normally have
+  none, but proof-read the transcript either way.
 - Times in `inserts` and `captions.json` are output seconds, snapped to frames.
 - Transitions are frame-level effects around a boundary, so they never shift the timing.
 - Audio: 12–15 ms fades at every cut, then highpass, a light compressor and loudnorm to

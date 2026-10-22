@@ -8,6 +8,14 @@ import sys
 SKILL_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ASSETS = os.path.join(SKILL_DIR, "assets")
 FONT = os.path.join(ASSETS, "fonts", "Saira-ExtraBold-Expanded.ttf")
+FONTS = {k: os.path.join(ASSETS, "fonts", v) for k, v in {
+    "expanded": "Saira-ExtraBold-Expanded.ttf",   # ref 01 caps captions
+    "light-italic": "OpenSans-Light-Italic.ttf",  # ref 02 connector words
+    "regular": "OpenSans-Regular.ttf",
+    "semibold-italic": "OpenSans-SemiBold-Italic.ttf",
+    "bold": "OpenSans-Bold.ttf",
+    "extrabold-italic": "OpenSans-ExtraBold-Italic.ttf",  # ref 02 hero word
+}.items()}
 CACHE = os.path.expanduser(os.environ.get("REEL_CACHE", "~/.cache/reel-editor"))
 
 
