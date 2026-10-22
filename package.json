@@ -1,0 +1,17 @@
+{
+  "name": "becris-lead-alerts",
+  "version": "1.0.0",
+  "description": "Instant SMS / email / Telegram alerts when a lead submits a Meta (Facebook/Instagram) Lead Ads form for Becris Detailer LLC.",
+  "type": "module",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test test/*.test.js",
+    "test-alert": "node scripts/send-test-alert.js"
+  },
+  "license": "UNLICENSED",
+  "private": true
+}
