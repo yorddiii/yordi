@@ -21,7 +21,8 @@ EDIT.json (paths relative to the file; all times in OUTPUT seconds unless noted)
      "trans_in": "flash", "trans_out": "flash"},
     {"start": 13.0, "end": 14.1, "layout": "pip", "src": "raw/macro.MOV", "in": 0,
      "rect": [0.17, 0.30, 0.66, 0.27],        # x, y, w, h as fractions of the frame
-     "fade_in": 0.0, "fade_out": 0.12, "opacity": 1.0}   # floats over whatever is below
+     "fade_in": 0.0, "fade_out": 0.12, "opacity": 1.0,   # floats over whatever is below
+     "shape": "rect"}                         # or "circle" (round logo badge)
   ],
   "fade_in": 0.1,              # from black at the start (seconds)
   "fade_out": 0.3,             # to black, ending where the tail starts
@@ -591,7 +592,7 @@ def main():
     if a.preview and not a.out:
         out = os.path.splitext(out)[0] + "_preview.mp4"
     os.makedirs(os.path.dirname(out), exist_ok=True)
-    pip_readers = {}
+    pip_readers, pip_masks = {}, {}
     with tempfile.TemporaryDirectory() as tmp:
         wav = build_audio(edit, base, cuts, fps, tmp, f_from, f_to)
         enc = ["ffmpeg", "-loglevel", "error", "-nostdin", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24",
@@ -631,6 +632,12 @@ def main():
                         al *= min(1, (pip["f1"] - fi) / (pip["fade_out"] * fps))
                     x0, y0 = int(x * W), int(y * H)
                     reg = img[y0:y0 + ph, x0:x0 + pw]
+                    if pip.get("shape") == "circle":  # e.g. a round logo badge
+                        if (pw, ph) not in pip_masks:
+                            yy, xx = np.mgrid[0:ph, 0:pw].astype(np.float32)
+                            d = np.sqrt((xx - pw / 2 + 0.5) ** 2 + (yy - ph / 2 + 0.5) ** 2)
+                            pip_masks[(pw, ph)] = np.clip(min(pw, ph) / 2 - d, 0, 2)[..., None] / 2
+                        al = al * pip_masks[(pw, ph)][:reg.shape[0], :reg.shape[1]]
                     img[y0:y0 + ph, x0:x0 + pw] = reg * (1 - al) + frame[:reg.shape[0], :reg.shape[1]] * al
                 if fi < content:
                     caps.draw(img, fi / fps)
