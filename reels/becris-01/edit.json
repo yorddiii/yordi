@@ -1,0 +1,357 @@
+{
+ "canvas": {
+  "w": 1080,
+  "h": 1920,
+  "fps": 30
+ },
+ "grade": {
+  "contrast": 1.03,
+  "saturation": 1.06
+ },
+ "aroll": [
+  {
+   "src": "raw/becris_clean.mp4",
+   "in": 0.45,
+   "out": 31.9,
+   "zoom": 1.0
+  }
+ ],
+ "inserts": [
+  {
+   "start": 0.0,
+   "end": 2.3,
+   "src": "raw/becris_clean.mp4",
+   "in": 18.8,
+   "speed": 1.0,
+   "zoom": 1.0,
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "trans_in": "cut",
+   "trans_out": "cut"
+  },
+  {
+   "start": 2.3,
+   "end": 3.3,
+   "src": "raw/becris_clean.mp4",
+   "in": 2.9,
+   "speed": 1.0,
+   "zoom": 1.0,
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "trans_in": "cut",
+   "trans_out": "cut"
+  },
+  {
+   "start": 3.3,
+   "end": 4.45,
+   "src": "raw/becris_clean.mp4",
+   "in": 5.05,
+   "speed": 1.0,
+   "zoom": 1.08,
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "trans_in": "cut",
+   "trans_out": "cut"
+  },
+  {
+   "start": 4.45,
+   "end": 5.85,
+   "src": "raw/becris_clean.mp4",
+   "in": 12.7,
+   "speed": 1.0,
+   "zoom": 1.0,
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "trans_in": "flash",
+   "trans_out": "cut"
+  },
+  {
+   "start": 5.85,
+   "end": 6.6,
+   "src": "raw/becris_clean.mp4",
+   "in": 21.45,
+   "speed": 1.0,
+   "zoom": 1.1,
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "trans_in": "cut",
+   "trans_out": "cut"
+  },
+  {
+   "start": 6.6,
+   "end": 7.95,
+   "src": "raw/becris_clean.mp4",
+   "in": 7.25,
+   "speed": 0.97,
+   "zoom": 1.0,
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "trans_in": "cut",
+   "trans_out": "cut"
+  },
+  {
+   "start": 7.95,
+   "end": 9.6,
+   "src": "raw/becris_clean.mp4",
+   "in": 9.12,
+   "speed": 1.0,
+   "zoom": 1.0,
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "trans_in": "flash",
+   "trans_out": "cut"
+  },
+  {
+   "start": 9.6,
+   "end": 11.1,
+   "src": "raw/becris_clean.mp4",
+   "in": 10.85,
+   "speed": 1.0,
+   "zoom": 1.0,
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "trans_in": "cut",
+   "trans_out": "cut"
+  },
+  {
+   "start": 11.1,
+   "end": 12.4,
+   "layout": "split",
+   "trans_in": "flash",
+   "trans_out": "flash",
+   "top": {
+    "src": "raw/becris_clean.mp4",
+    "in": 13.4,
+    "focus": [
+     0.5,
+     0.4
+    ]
+   },
+   "bottom": {
+    "src": "raw/becris_clean.mp4",
+    "in": 26.5,
+    "focus": [
+     0.5,
+     0.35
+    ]
+   }
+  },
+  {
+   "start": 12.4,
+   "end": 13.15,
+   "src": "raw/becris_clean.mp4",
+   "in": 3.7,
+   "speed": 1.0,
+   "zoom": 1.1,
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "trans_in": "cut",
+   "trans_out": "cut"
+  },
+  {
+   "start": 13.15,
+   "end": 14.7,
+   "src": "raw/becris_clean.mp4",
+   "in": 13.9,
+   "speed": 0.6,
+   "zoom": 1.0,
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "trans_in": "cut",
+   "trans_out": "cut"
+  },
+  {
+   "start": 14.7,
+   "end": 15.8,
+   "src": "raw/becris_clean.mp4",
+   "in": 15.62,
+   "speed": 1.0,
+   "zoom": 1.0,
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "trans_in": "whip",
+   "trans_out": "cut"
+  },
+  {
+   "start": 15.8,
+   "end": 16.4,
+   "src": "raw/becris_clean.mp4",
+   "in": 17.0,
+   "speed": 1.0,
+   "zoom": 1.0,
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "trans_in": "cut",
+   "trans_out": "cut"
+  },
+  {
+   "start": 16.4,
+   "end": 16.9,
+   "src": "raw/becris_clean.mp4",
+   "in": 17.85,
+   "speed": 1.0,
+   "zoom": 1.1,
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "trans_in": "cut",
+   "trans_out": "cut"
+  },
+  {
+   "start": 16.9,
+   "end": 18.15,
+   "src": "raw/becris_clean.mp4",
+   "in": 25.3,
+   "speed": 0.85,
+   "zoom": 1.0,
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "trans_in": "flash",
+   "trans_out": "cut"
+  },
+  {
+   "start": 18.15,
+   "end": 19.6,
+   "src": "raw/becris_clean.mp4",
+   "in": 26.45,
+   "speed": 1.0,
+   "zoom": 1.0,
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "trans_in": "cut",
+   "trans_out": "cut"
+  },
+  {
+   "start": 19.6,
+   "end": 21.1,
+   "src": "raw/becris_clean.mp4",
+   "in": 20.0,
+   "speed": 1.0,
+   "zoom": 1.2,
+   "focus": [
+    0.65,
+    0.5
+   ],
+   "trans_in": "cut",
+   "trans_out": "cut"
+  },
+  {
+   "start": 21.1,
+   "end": 23.5,
+   "src": "raw/becris_clean.mp4",
+   "in": 12.65,
+   "speed": 0.55,
+   "zoom": 1.1,
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "trans_in": "prism",
+   "trans_out": "cut"
+  },
+  {
+   "start": 23.5,
+   "end": 25.15,
+   "src": "raw/becris_clean.mp4",
+   "in": 23.35,
+   "speed": 1.0,
+   "zoom": 1.0,
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "trans_in": "cut",
+   "trans_out": "cut"
+  },
+  {
+   "start": 25.15,
+   "end": 26.5,
+   "src": "raw/becris_clean.mp4",
+   "in": 9.2,
+   "speed": 1.0,
+   "zoom": 1.15,
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "trans_in": "cut",
+   "trans_out": "cut"
+  },
+  {
+   "start": 26.5,
+   "end": 28.45,
+   "src": "raw/becris_clean.mp4",
+   "in": 10.85,
+   "speed": 0.8,
+   "zoom": 1.15,
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "trans_in": "cut",
+   "trans_out": "cut"
+  },
+  {
+   "start": 28.45,
+   "end": 31.45,
+   "src": "raw/becris_clean.mp4",
+   "in": 26.4,
+   "speed": 0.5,
+   "zoom": 1.05,
+   "focus": [
+    0.5,
+    0.45
+   ],
+   "trans_in": "flash",
+   "trans_out": "cut"
+  },
+  {
+   "start": 28.6,
+   "end": 31.45,
+   "layout": "pip",
+   "shape": "circle",
+   "src": "raw/logo.mp4",
+   "in": 0.0,
+   "rect": [
+    0.25,
+    0.17,
+    0.5,
+    0.28125
+   ],
+   "fade_in": 0.2
+  }
+ ],
+ "captions": "captions.json",
+ "voice_lufs": -15,
+ "fade_out": 0.25,
+ "output": "out/becris_reedit_A.mp4"
+}

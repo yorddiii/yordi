@@ -1,0 +1,804 @@
+{
+ "style": {
+  "preset": "bold",
+  "y": 0.5
+ },
+ "pages": [
+  {
+   "lines": [
+    {
+     "color": "white",
+     "words": [
+      {
+       "t": "ATTENTION",
+       "s": 0.15
+      }
+     ]
+    },
+    {
+     "color": "orange",
+     "words": [
+      {
+       "t": "ALEXANDRIA",
+       "s": 0.69
+      }
+     ]
+    }
+   ],
+   "icon": "pin",
+   "start": 0.15,
+   "end": 1.246
+  },
+  {
+   "lines": [
+    {
+     "color": "white",
+     "words": [
+      {
+       "t": "AND",
+       "s": 1.246
+      },
+      {
+       "t": "SURROUNDING",
+       "s": 1.347
+      }
+     ]
+    },
+    {
+     "color": "orange",
+     "words": [
+      {
+       "t": "AREAS",
+       "s": 1.8
+      }
+     ]
+    }
+   ],
+   "start": 1.246,
+   "end": 2.31
+  },
+  {
+   "lines": [
+    {
+     "color": "white",
+     "words": [
+      {
+       "t": "IS",
+       "s": 2.31
+      },
+      {
+       "t": "YOUR",
+       "s": 2.49
+      },
+      {
+       "t": "CAR",
+       "s": 2.58
+      },
+      {
+       "t": "STILL",
+       "s": 2.831
+      }
+     ]
+    },
+    {
+     "color": "orange",
+     "words": [
+      {
+       "t": "LOOKING",
+       "s": 2.97
+      },
+      {
+       "t": "ROUGH",
+       "s": 3.297
+      }
+     ]
+    }
+   ],
+   "start": 2.31,
+   "end": 3.54
+  },
+  {
+   "lines": [
+    {
+     "color": "orange",
+     "words": [
+      {
+       "t": "AND",
+       "s": 3.54
+      },
+      {
+       "t": "MESSY",
+       "s": 3.63
+      }
+     ],
+     "size": 92
+    }
+   ],
+   "start": 3.54,
+   "end": 4.44
+  },
+  {
+   "lines": [
+    {
+     "color": "white",
+     "words": [
+      {
+       "t": "WELL",
+       "s": 4.44
+      },
+      {
+       "t": "HERE",
+       "s": 4.59
+      },
+      {
+       "t": "AT",
+       "s": 4.89
+      }
+     ]
+    },
+    {
+     "color": "orange",
+     "words": [
+      {
+       "t": "BECRIS",
+       "s": 5.039
+      },
+      {
+       "t": "DETAILING",
+       "s": 5.4
+      }
+     ]
+    }
+   ],
+   "start": 4.44,
+   "end": 5.76
+  },
+  {
+   "lines": [
+    {
+     "color": "white",
+     "words": [
+      {
+       "t": "WE",
+       "s": 5.76
+      },
+      {
+       "t": "COME",
+       "s": 5.91
+      },
+      {
+       "t": "STRAIGHT",
+       "s": 6.125
+      }
+     ]
+    },
+    {
+     "color": "orange",
+     "words": [
+      {
+       "t": "TO",
+       "s": 6.395
+      },
+      {
+       "t": "YOU",
+       "s": 6.54
+      }
+     ]
+    }
+   ],
+   "start": 5.76,
+   "end": 6.87
+  },
+  {
+   "lines": [
+    {
+     "color": "white",
+     "words": [
+      {
+       "t": "WERE",
+       "s": 6.87
+      },
+      {
+       "t": "FULLY",
+       "s": 7.02
+      }
+     ]
+    },
+    {
+     "color": "orange",
+     "words": [
+      {
+       "t": "MOBILE",
+       "s": 7.32
+      }
+     ]
+    }
+   ],
+   "start": 6.87,
+   "end": 7.95
+  },
+  {
+   "lines": [
+    {
+     "color": "white",
+     "words": [
+      {
+       "t": "AND",
+       "s": 7.95
+      },
+      {
+       "t": "RIGHT",
+       "s": 8.051
+      },
+      {
+       "t": "NOW",
+       "s": 8.31
+      }
+     ]
+    },
+    {
+     "color": "white",
+     "words": [
+      {
+       "t": "WERE",
+       "s": 8.46
+      },
+      {
+       "t": "OFFERING",
+       "s": 8.61
+      }
+     ]
+    }
+   ],
+   "start": 7.95,
+   "end": 8.94
+  },
+  {
+   "lines": [
+    {
+     "color": "orange",
+     "words": [
+      {
+       "t": "$50",
+       "s": 8.94
+      },
+      {
+       "t": "OFF",
+       "s": 9.6
+      }
+     ],
+     "size": 130
+    }
+   ],
+   "start": 8.94,
+   "end": 9.99
+  },
+  {
+   "lines": [
+    {
+     "color": "white",
+     "words": [
+      {
+       "t": "OF",
+       "s": 9.99
+      },
+      {
+       "t": "A",
+       "s": 10.11
+      }
+     ]
+    },
+    {
+     "color": "orange",
+     "words": [
+      {
+       "t": "FULL",
+       "s": 10.182
+      },
+      {
+       "t": "DETAIL",
+       "s": 10.38
+      }
+     ]
+    }
+   ],
+   "start": 9.99,
+   "end": 11.1
+  },
+  {
+   "lines": [
+    {
+     "color": "orange",
+     "words": [
+      {
+       "t": "INTERIOR",
+       "s": 11.1
+      }
+     ]
+    }
+   ],
+   "y": 0.25,
+   "start": 11.1,
+   "end": 12.4
+  },
+  {
+   "lines": [
+    {
+     "color": "orange",
+     "words": [
+      {
+       "t": "EXTERIOR",
+       "s": 11.607
+      }
+     ]
+    }
+   ],
+   "y": 0.75,
+   "start": 11.1,
+   "end": 12.4
+  },
+  {
+   "lines": [
+    {
+     "color": "white",
+     "words": [
+      {
+       "t": "STAINED",
+       "s": 12.48
+      },
+      {
+       "t": "SEATS",
+       "s": 12.9
+      }
+     ]
+    },
+    {
+     "color": "orange",
+     "words": [
+      {
+       "t": "EXTRACTED",
+       "s": 13.11
+      }
+     ]
+    }
+   ],
+   "start": 12.48,
+   "end": 13.65
+  },
+  {
+   "lines": [
+    {
+     "color": "white",
+     "words": [
+      {
+       "t": "AND",
+       "s": 13.65
+      },
+      {
+       "t": "DEEP",
+       "s": 13.83
+      }
+     ]
+    },
+    {
+     "color": "orange",
+     "words": [
+      {
+       "t": "CLEANED",
+       "s": 14.1
+      }
+     ]
+    }
+   ],
+   "start": 13.65,
+   "end": 14.76
+  },
+  {
+   "lines": [
+    {
+     "color": "white",
+     "words": [
+      {
+       "t": "ENGINE",
+       "s": 14.76
+      },
+      {
+       "t": "BAY",
+       "s": 14.94
+      }
+     ]
+    },
+    {
+     "color": "orange",
+     "words": [
+      {
+       "t": "DEGREASED",
+       "s": 15.15
+      }
+     ]
+    }
+   ],
+   "start": 14.76,
+   "end": 15.81
+  },
+  {
+   "lines": [
+    {
+     "color": "white",
+     "words": [
+      {
+       "t": "HEADLIGHTS",
+       "s": 15.81
+      }
+     ]
+    },
+    {
+     "color": "orange",
+     "words": [
+      {
+       "t": "RESTORED",
+       "s": 16.2
+      }
+     ]
+    }
+   ],
+   "start": 15.81,
+   "end": 16.92
+  },
+  {
+   "lines": [
+    {
+     "color": "white",
+     "words": [
+      {
+       "t": "AND",
+       "s": 16.92
+      },
+      {
+       "t": "THE",
+       "s": 17.04
+      },
+      {
+       "t": "EXTERIOR",
+       "s": 17.16
+      }
+     ]
+    },
+    {
+     "color": "orange",
+     "words": [
+      {
+       "t": "WASHED",
+       "s": 17.67
+      }
+     ]
+    }
+   ],
+   "start": 16.92,
+   "end": 18.09
+  },
+  {
+   "lines": [
+    {
+     "color": "white",
+     "words": [
+      {
+       "t": "AND",
+       "s": 18.09
+      },
+      {
+       "t": "FINISHED",
+       "s": 18.239
+      },
+      {
+       "t": "TO",
+       "s": 18.618
+      },
+      {
+       "t": "A",
+       "s": 18.723
+      }
+     ]
+    },
+    {
+     "color": "orange",
+     "words": [
+      {
+       "t": "DEEP",
+       "s": 18.81
+      },
+      {
+       "t": "GLOSSY",
+       "s": 19.107
+      },
+      {
+       "t": "SHINE",
+       "s": 19.47
+      }
+     ]
+    }
+   ],
+   "start": 18.09,
+   "end": 19.95
+  },
+  {
+   "lines": [
+    {
+     "color": "orange",
+     "words": [
+      {
+       "t": "TOP",
+       "s": 19.95
+      },
+      {
+       "t": "TO",
+       "s": 20.25
+      },
+      {
+       "t": "BOTTOM",
+       "s": 20.37
+      }
+     ],
+     "size": 92
+    }
+   ],
+   "start": 19.95,
+   "end": 21.12
+  },
+  {
+   "lines": [
+    {
+     "color": "white",
+     "words": [
+      {
+       "t": "THIS",
+       "s": 21.12
+      },
+      {
+       "t": "IS",
+       "s": 21.33
+      },
+      {
+       "t": "A",
+       "s": 21.45
+      }
+     ]
+    },
+    {
+     "color": "orange",
+     "words": [
+      {
+       "t": "LIMITED",
+       "s": 21.54
+      },
+      {
+       "t": "TIME",
+       "s": 21.87
+      },
+      {
+       "t": "OFFER",
+       "s": 22.11
+      }
+     ]
+    }
+   ],
+   "start": 21.12,
+   "end": 22.38
+  },
+  {
+   "lines": [
+    {
+     "color": "white",
+     "words": [
+      {
+       "t": "FOR",
+       "s": 22.38
+      },
+      {
+       "t": "THE",
+       "s": 22.53
+      },
+      {
+       "t": "FIRST",
+       "s": 22.62
+      }
+     ]
+    },
+    {
+     "color": "orange",
+     "words": [
+      {
+       "t": "10",
+       "s": 22.951
+      },
+      {
+       "t": "PEOPLE",
+       "s": 23.1
+      }
+     ]
+    }
+   ],
+   "start": 22.38,
+   "end": 23.34
+  },
+  {
+   "lines": [
+    {
+     "color": "white",
+     "words": [
+      {
+       "t": "THAT",
+       "s": 23.34
+      },
+      {
+       "t": "BOOK",
+       "s": 23.49
+      }
+     ],
+     "size": 84
+    }
+   ],
+   "start": 23.34,
+   "end": 24.03
+  },
+  {
+   "lines": [
+    {
+     "color": "white",
+     "words": [
+      {
+       "t": "SO",
+       "s": 24.03
+      },
+      {
+       "t": "CLICK",
+       "s": 24.27
+      }
+     ]
+    },
+    {
+     "color": "orange",
+     "words": [
+      {
+       "t": "GET",
+       "s": 24.574
+      },
+      {
+       "t": "QUOTE",
+       "s": 24.778
+      },
+      {
+       "t": "BELOW",
+       "s": 25.02
+      }
+     ]
+    }
+   ],
+   "start": 24.03,
+   "end": 25.26
+  },
+  {
+   "lines": [
+    {
+     "color": "white",
+     "words": [
+      {
+       "t": "TO",
+       "s": 25.26
+      },
+      {
+       "t": "SECURE",
+       "s": 25.41
+      }
+     ]
+    },
+    {
+     "color": "orange",
+     "words": [
+      {
+       "t": "$50",
+       "s": 25.85
+      },
+      {
+       "t": "OFF",
+       "s": 26.4
+      }
+     ],
+     "size": 110
+    }
+   ],
+   "start": 25.26,
+   "end": 26.67
+  },
+  {
+   "lines": [
+    {
+     "color": "white",
+     "words": [
+      {
+       "t": "AND",
+       "s": 26.67
+      },
+      {
+       "t": "WELL",
+       "s": 26.79
+      },
+      {
+       "t": "CONTACT",
+       "s": 26.97
+      },
+      {
+       "t": "YOU",
+       "s": 27.36
+      }
+     ]
+    },
+    {
+     "color": "orange",
+     "words": [
+      {
+       "t": "FOR",
+       "s": 27.51
+      },
+      {
+       "t": "THE",
+       "s": 27.662
+      },
+      {
+       "t": "BEST",
+       "s": 27.766
+      },
+      {
+       "t": "DATE",
+       "s": 28.11
+      }
+     ]
+    }
+   ],
+   "start": 26.67,
+   "end": 28.45
+  },
+  {
+   "lines": [
+    {
+     "color": "white",
+     "words": [
+      {
+       "t": "OR",
+       "s": 28.85
+      },
+      {
+       "t": "CALL",
+       "s": 29.0
+      },
+      {
+       "t": "US",
+       "s": 29.15
+      },
+      {
+       "t": "AT",
+       "s": 29.27
+      }
+     ]
+    },
+    {
+     "color": "orange",
+     "words": [
+      {
+       "t": "(412)",
+       "s": 29.5
+      },
+      {
+       "t": "654-1307",
+       "s": 29.75
+      }
+     ],
+     "size": 84
+    }
+   ],
+   "y": 0.6,
+   "start": 28.85,
+   "end": 31.45
+  }
+ ]
+}
